@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Righteous", cursive;
+}
+html {
+  background: #252525;
+  font-size: 62.5%;
+}
+.title {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  font-size: 5rem;
+  color: white;
+}
+h2 {
+  font-size: 3rem;
+  color: white;
+}
+i,
+svg {
+  pointer-events: none;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 6rem;
+  height: 6rem;
+  margin: 1rem 0.6rem;
+  cursor: pointer;
+  border-style: ridge;
+  border-width: 0.2rem;
+  border-color: white;
+  border-radius: 1.8rem;
+}
+
+/* .hihat-pad,
+.kick-pad,
+.snare-pad {
+  background: radial-gradient(
+    circle,
+    rgba(146, 148, 150, 1) 0%,
+    rgba(37, 37, 37, 1) 100%
+  );
+} */
+.kick-pad.active {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 72, 60, 1) 12%,
+    rgba(253, 183, 29, 1) 89%
+  );
+}
+.snare-pad.active {
+  background: linear-gradient(
+    90deg,
+    rgba(60, 241, 81, 1) 12%,
+    rgba(41, 177, 187, 1) 62%
+  );
+}
+.hihat-pad.active {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 60, 146, 1) 12%,
+    rgba(159, 67, 187, 1) 68%
+  );
+}
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 98vh;
+}
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 0.5rem;
+}
+.controls button {
+  padding: 1rem;
+  background: rgb(87, 90, 90);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 0.3rem;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: lightseagreen;
+}
+.pad {
+  transition: all 0.5s ease;
+}
+.play {
+  padding: 3rem 3.5rem;
+  font-size: 2.5rem;
+  background: rgb(87, 90, 90);
+  color: white;
+  cursor: pointer;
+  margin-top: 3rem;
+  border-radius: 6rem;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: lightseagreen;
+}
+select {
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  font-size: 1.5rem;
+  background: rgb(87, 90, 90);
+  color: white;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: lightseagreen;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.mute.active {
+  background: rgb(163, 163, 163);
+}
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: rgb(85, 90, 90);
+  cursor: pointer;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: lightseagreen;
+}
+.tempo p {
+  color: white;
+  font-size: 2.5rem;
+  margin: 2rem;
+  text-align: center;
+}
