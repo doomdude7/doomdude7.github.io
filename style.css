@@ -172,3 +172,63 @@ select {
   margin: 2rem;
   text-align: center;
 }
+@media only screen and (max-width: 1004px) {
+  .sequencer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .kick,
+  .snare,
+  .hihat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .hihat-track,
+  .snare-track,
+  .kick-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  .tempo {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* .tempo-slider {
+    transform: rotate(270deg);
+  } */
+  .play {
+    margin-top: 1rem;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+  .controls h2 {
+    margin-bottom: 1rem;
+  }
+  .controls button {
+    margin-bottom: 1rem;
+  }
+  .title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .title h1 {
+    font-size: 4.5rem;
+  }
+}
